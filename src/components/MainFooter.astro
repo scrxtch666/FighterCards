@@ -1,9 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import github from "../assets/github.png";
-import discord from "../assets/discord.png";
 import linkedin from "../assets/linkedin.png";
 import instagram from "../assets/instagram.png";
+const currentYear = new Date().getFullYear();
 ---
 
 <div class="contacts">
@@ -11,7 +11,7 @@ import instagram from "../assets/instagram.png";
   <div class="ig"><Image src={instagram} alt="" class="imgFit" /></div>
   <div class="link"><Image src={linkedin} alt="" class="imgFit" /></div>
 </div>
-<span>Made by @scrxtch <br />© 2024</span>
+<span>Made by @scrxtch <br />© {currentYear}</span>
 
 <style>
   span {

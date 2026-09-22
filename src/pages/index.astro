@@ -1,5 +1,20 @@
 ---
-import FighterCard from "./fighterCard.astro"
----
-<FighterCard />
+import Fighter from "../components/Fighter.astro";
+import ShowCase from "../components/ShowCase.astro";
 
+import Layout from "../layouts/Layout.astro";
+import { fighterDatas } from "../lib/fighterDatas";
+import { showCaseData } from "../lib/showCaseData";
+---
+
+<Layout title="FighterCards">
+  <div class="showCase">
+    {showCaseData.map((showCase) => <ShowCase showCase={showCase} />)}
+  </div>
+ 
+<!--
+  <div class="container">
+    {fighterDatas.map((fighterData) => <Fighter fighterData={fighterData} />)}
+  </div>
+-->
+</Layout>

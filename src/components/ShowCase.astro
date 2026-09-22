@@ -3,102 +3,38 @@ const { showCase } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
-<div class="mainCase">
-  <div class="imgPart">
-    <Image src={showCase.image} alt="" />
+<div
+  class="w-full bg-customGray flex p-4 gap-5 rounded-2xl
+         font-mono text-xs h-52
+         shadow-gold
+         hover:shadow-gold-hover
+         transition-shadow duration-300"
+>
+  <div class="flex w-48">
+    <Image src={showCase.image} alt="" class="h-auto w-full rounded-2xl" />
   </div>
-  <div class="textPart">
-    <div class="name">
-      <div class="nickName">
-        {showCase.name}
-        <br />
-        <span class="belt">{showCase.belt} belt</span>
-      </div>
+  <div class="w-full flex flex-col justify-between">
+    <div class="flex flex-col">
+      <span>{showCase.name}</span>
+      <span class="text-customGold">{showCase.belt} belt</span>
     </div>
-    <div class="stats">
-      <!--Age stat -->
-      <div class="age">
+    <div class="flex justify-between">
+      <div class="font-mono">
         {showCase.age}
         <br />
-        <span>Age</span>
+        <span class="text-customGold">Age</span>
       </div>
-      <!--Weight stat -->
       <div class="weight">
         {showCase.weight} kg <br />
-        <span>Weight</span>
+        <span class="text-customGold">Weight</span>
       </div>
-      <!--Height stat -->
       <div class="height">
         {showCase.height} cm <br />
-        <span>Height</span>
+        <span class="text-customGold">Height</span>
       </div>
     </div>
     <div class="bio">
-      {showCase.bio}
+      <article>{showCase.bio}</article>
     </div>
   </div>
 </div>
-<style>
-  .mainCase {
-    border-style: solid;
-    border-color: #171717;
-    display: flex;
-    gap: 25px;
-    border-radius: 0.8em;
-    height: 300px;
-    max-width: 550px;
-    width: 100%;
-    padding: 25px;
-    font-family: monospace;
-    font-size: large;
-    /* Původní
-    background-color: black;
-    */
-    background-color: #171717;
-
-    box-shadow:
-      0 0 15px goldenrod,
-      0 0 15px goldenrod,
-      0 0 15px goldenrod,
-      0 0 15px goldenrod;
-  }
-
-  .mainCase:hover {
-    box-shadow:
-      0 0 5px goldenrod,
-      0 0 25px goldenrod,
-      0 0 50px goldenrod,
-      0 0 100px goldenrod;
-  }
-  .imgPart {
-    display: flex;
-    width: 200px;
-  }
-
-  .imgPart img {
-    border-radius: 0.8em;
-    max-width: 100%; /* Obrázek se přizpůsobí šířce divu */
-    height: auto; /* Necháme výšku obrázku automaticky podle jeho šířky */
-  }
-
-  .textPart {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    width: 350px;
-  }
-
-  .nickName,
-  .stats,
-  .bio {
-  }
-
-  .stats {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  span {
-    color: goldenrod;
-  }
-</style>

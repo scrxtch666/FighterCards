@@ -2,7 +2,6 @@
 import Fighter from "../components/Fighter.astro";
 import MainMenu from "../components/MainMenu.astro";
 import ShowCase from "../components/ShowCase.astro";
-import Devider from "../components/Devider.astro";
 import Footer from "../components/Footer.astro";
 import Add from "../components/Add.astro";
 import Layout from "../layouts/Layout.astro";
@@ -21,7 +20,6 @@ import { showCaseData } from "../lib/showCaseData";
   </div>
 -->
 
-  <Devider />
   <div class="container">
     {fighterDatas.map((fighterData) => <Fighter fighterData={fighterData} />)}
   </div>

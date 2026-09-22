@@ -4,21 +4,26 @@
   "version": "0.0.1",
   "scripts": {
     "astro": "astro dev",
-    "node-server": "node server.js",
+    "node-server": "nodemon server.js",
     "dev": "concurrently \"npm run astro\" \"npm run node-server\"",
     "start": "npm run dev",
     "build": "astro check && astro build",
     "preview": "astro preview"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.10",
-    "@astrojs/db": "^0.11.5",
-    "astro": "^4.6.4",
-    "express": "^4.17.1",
+    "@astrojs/check": "^0.9.10",
+    "@astrojs/db": "^0.21.3",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.3",
+    "astro-icon": "^1.2.0",
     "body-parser": "^1.19.0",
+    "cors": "^2.8.6",
+    "express": "^4.17.1",
+    "tailwindcss": "^4.3.3",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.14"
   }
 }
