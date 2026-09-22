@@ -6,75 +6,19 @@ import plus from "../assets/plus.png";
 import retype from "../assets/retype.png";
 ---
 
-<ul>
-  <div class="logoPart">
-    <li class="homeLogo"><a href="">FighterCards</a></li>
+<div
+  class="w-full h-20 flex bg-customGray items-center rounded-2xl justify-between p-4 text-customWhite"
+>
+  <div><a href="../pages/index.astro">FighterCards</a></div>
+  <div class="flex gap-8">
+    <a href="../action/AddFighter"
+      ><Image src={plus} alt="" class="w-4 h-4" /></a
+    >
+    <a href="../action/DeleteFighter"
+      ><Image src={minus} alt="" class="w-4 h-4" /></a
+    >
+    <a href="../action/AllStats"
+      ><Image src={retype} alt="" class="w-4 h-4" /></a
+    >
   </div>
-
-  <div class="textPart">
-    <li>
-      <a href="../action/AddFighter"><Image src={plus} alt="" class="logo" /></a
-      >
-    </li>
-    <li>
-      <a href="../action/DeleteFighter"
-        ><Image src={minus} alt="" class="logo" /></a
-      >
-    </li>
-    <li>
-      <a href="../action/AllStats"><Image src={retype} alt="" class="logo" /></a
-      >
-    </li>
-  </div>
-</ul>
-
-<style>
-  @import url(https://fonts.googleapis.com/css?family=VT323);
-  ul {
-    display: flex;
-    justify-content: space-between;
-    top: 0;
-    max-width: 1150px;
-    width: 100%;
-    margin: 0 auto;
-    /* Původní
-    background-color: #242429;
-    */
-    background-color: #171717;
-    padding: 15px;
-    border-radius: 0.9em;
-  }
-
-  li {
-    float: left;
-    list-style-type: none;
-    max-width: 50px;
-  }
-
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-
-  .logo {
-    width: 100%;
-    height: 100%;
-  }
-
-  .logo:hover {
-    border-radius: 2em;
-    box-shadow:
-      0 0 15px white,
-      0 0 15px white,
-      0 0 15px white,
-      0 0 15px white;
-  }
-
-  .textPart {
-    display: flex;
-    gap: 20px;
-  }
-</style>
+</div>

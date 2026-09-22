@@ -1,17 +1,12 @@
 ---
 import Fighter from "../../components/Fighter.astro";
-import MainMenu from "../../components/MainMenu.astro";
-import ShowCase from "../../components/ShowCase.astro";
-import Footer from "../../components/Footer.astro";
 import Layout from "../../layouts/Layout.astro";
 import { fighterDatas } from "../../lib/fighterDatas";
 import { showCaseData } from "../../lib/showCaseData";
-import Add from "../../components/Add.astro";
 import Delete from "../../components/Delete.astro";
 ---
 
 <Layout title="FighterCard">
-  <MainMenu />
   <div class="showCase">
     {showCaseData.map((showCase) => <Delete showCase={showCase} />)}
   </div>
@@ -24,7 +19,6 @@ import Delete from "../../components/Delete.astro";
   <div class="container">
     {fighterDatas.map((fighterData) => <Fighter fighterData={fighterData} />)}
   </div>
-  <Footer />
 </Layout>
 
 <style>
