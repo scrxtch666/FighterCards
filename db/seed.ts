@@ -1,5 +1,4 @@
 import { db, fighterData } from 'astro:db';
-import Insert from '../src/pages/action/Insert.astro';
 
 //await Insert();
 

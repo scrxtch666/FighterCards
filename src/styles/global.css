@@ -42,5 +42,6 @@
 @layer base {
   html {
     font-family: var(--font-mono);
+    color: rgba(233, 227, 227, 0.664);
   }
 }
