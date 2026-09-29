@@ -1,5 +1,5 @@
 import { Image } from "astro:assets";
-import obr1 from "../assets/obr1.jpg";
+import obr1 from "../assets/pfps/obr1.jpg";
 
 export const showCaseData = [{
   name: "Scrxtch",

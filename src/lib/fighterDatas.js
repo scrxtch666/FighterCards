@@ -1,85 +1,74 @@
-// Data: name, belt, age, weight, height, bio)
-import { Image } from 'astro:assets';
-import obr1 from "../assets/obr1.jpg";
-import obr2 from "../assets/obr2.jpg";
-import obr3 from "../assets/obr3.jpg";
-import obr4 from "../assets/obr4.jpg";
-import obr5 from "../assets/obr5.jpg";
 
+// Data: name, belt, age, weight, height, bio
 
+import obr1 from "../assets/pfps/obr1.jpg";
+import obr2 from "../assets/pfps/obr2.jpg";
+import obr3 from "../assets/pfps/obr3.jpg";
+import obr4 from "../assets/pfps/obr4.jpg";
+import obr5 from "../assets/pfps/obr5.jpg";
+import obr6 from "../assets/pfps/obr6.jpg"
 
 export const fighterDatas = [
-{
-  name: "Lacek",
-  belt: "Red",
-  age: "45",
-  weight: "100",
-  height: "160",
-  image: obr2,
-  bio: "TKD Lacek trainer"
-},
+  {
+    name: "Guts",
+    belt: "Black",
+    age: "24",
+    weight: "95",
+    height: "204",
+    image: obr1,
+    bio: "The Black Swordsman. A relentless warrior who survived countless battles through overwhelming strength, determination and an unbreakable will to live."
+  },
 
+  {
+    name: "Griffith",
+    belt: "White",
+    age: "24",
+    weight: "72",
+    height: "178",
+    image: obr2,
+    bio: "The charismatic leader of the Band of the Hawk. Brilliant, ambitious and willing to sacrifice everything to achieve his dream of ruling his own kingdom."
+  },
 
-{
-  name: "Šmarda",
-  belt: "White",
-  age: "23",
-  weight: "65",
-  height: "187",
-  image: obr3,
-  bio: "TKD Lacek trainer V2"
-},
+  {
+    name: "Casca",
+    belt: "Red",
+    age: "24",
+    weight: "58",
+    height: "165",
+    image: obr3,
+    bio: "A skilled swordswoman and former commander of the Band of the Hawk. Strong-willed, disciplined and fiercely devoted to those she cares about."
+  },
 
+  {
+    name: "Zodd",
+    belt: "Black",
+    age: "300",
+    weight: "180",
+    height: "250",
+    image: obr4,
+    bio: "Nosferatu Zodd, the Immortal. A legendary apostle who lives for battle and seeks opponents powerful enough to give him a true challenge."
+  },
 
-{
-  name: "Malinda",
-  belt: "Green",
-  age: "21",
-  weight: "90",
-  height: "175",
-  image: obr4,
-  bio: "Jude"
-},
+  {
+    name: "Serpico",
+    belt: "Blue",
+    age: "24",
+    weight: "70",
+    height: "178",
+    image: obr5,
+    bio: "A calm and exceptionally skilled swordsman. Serpico relies on speed, precision and intelligence rather than brute strength."
+  },
 
-{
-  name: "RTHWLDN",
-  belt: "Black",
-  age: "34",
-  weight: "81",
-  height: "183",
-  image: obr5,
-  bio: "Youtuber"
-},
-{
-  name: "Scrxtch",
-  belt: "Black",
-  age: "21",
-  weight: "85",
-  height: "195",
-  image: obr1,
-  bio: "Fight. Win. Never surrender. Dark past, bright future. Blade's edge, spirit's might. Bold conquerors own the world."
- },
+  {
+    name: "Skull Knight",
+    belt: "Black",
+    age: "1000",
+    weight: "110",
+    height: "210",
+    image: obr6,
+    bio: "A mysterious warrior who has existed for centuries. The Skull Knight opposes the God Hand and possesses immense knowledge of the world and its hidden forces."
+  }
+];
 
- {
-  name: "Test",
-  belt: "White",
-  age: "12",
-  weight: "36",
-  height: "154",
-  image: obr1,
-  bio: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum."
- },
+// export default data;
 
- {
-  name: "Test2",
-  belt: "Red",
-  age: "18",
-  weight: "87",
-  height: "195",
-  image: obr1,
-  bio: "Test2"
- }
- ];
-
-
-//export default data;
