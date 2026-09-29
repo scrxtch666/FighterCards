@@ -1,4 +1,4 @@
-# 🥋 Taekwondo Fighters — V2
+# 🥋 FighterCards — V2
 
 A modern and responsive web project focused on presenting fighters in a clean, interactive and visually engaging way.
 
