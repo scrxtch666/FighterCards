@@ -3,99 +3,40 @@ const { fighterData } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
-<div class="mainCase">
-  <div class="imgPart">
-    <Image src={fighterData.image} alt="" />
+<div
+  data-fighter-card
+  data-fighter-name={fighterData.name}
+  class="bg-customGray flex p-4 gap-5 rounded-2xl font-mono text-xs h-52 shadow-pink hover:shadow-pink-hover transition-shadow duration-300 cursor-pointer"
+>
+  <div class="flex w-48">
+    <Image
+      src={fighterData.image}
+      alt={fighterData.name}
+      class="h-auto w-full rounded-2xl"
+    />
   </div>
-  <div class="textPart">
-    <div class="name">
-      <div class="nickName">
-        {fighterData.name}
-        <br />
-        <span class="belt">{fighterData.belt} belt</span>
-      </div>
+  <div class="w-full flex flex-col">
+    <div class="flex flex-col h-full">
+      <span>{fighterData.name}</span>
+      <span class="text-pink-600">{fighterData.belt} belt</span>
     </div>
-    <div class="stats">
-      <!--Age stat -->
-      <div class="age">
+    <div class="flex justify-between h-full">
+      <div class="font-mono">
         {fighterData.age}
         <br />
-        <span>Age</span>
+        <span class="text-pink-600">Age</span>
       </div>
-      <!--Weight stat -->
       <div class="weight">
         {fighterData.weight} kg <br />
-        <span>Weight</span>
+        <span class="text-pink-600">Weight</span>
       </div>
-      <!--Height stat -->
       <div class="height">
         {fighterData.height} cm <br />
-        <span>Height</span>
+        <span class="text-pink-600">Height</span>
       </div>
     </div>
-    <div class="bio">
-      {fighterData.bio}
-    </div>
+    <div class="bio h-full overflow-hidden text-ellipsis"><article>{fighterData.bio}</article></div>
   </div>
 </div>
-<style>
- 
-  .mainCase {
-    border-style: solid;
-    border-color: #171717;
-    display: flex;
-    gap: 25px;
-    border-radius: 0.8em;
-    height: 125px;
-    max-width: 250px;
-    width: 100%;
-    padding: 25px;
-    font-family: monospace;
-    font-size: smaller;
-    /*
-      background-color: #242428;
-      */
-    background-color: #171717;
-  }
 
-  .mainCase:hover {
-    box-shadow:
-      0 0 2px violet,
-      0 0 15px violet,
-      0 0 25px violet,
-      0 0 50px violet;
-  }
-
-  .imgPart {
-    display: flex;
-    width: 150px;
-  }
-
-  .imgPart img {
-    border-radius: 0.8em;
-    max-width: 100%; /* Obrázek se přizpůsobí šířce divu */
-    height: auto; /* Necháme výšku obrázku automaticky podle jeho šířky */
-    object-fit: cover;
-  }
-
-  .textPart {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    width: 350px;
-  }
-
-  .nickName,
-  .stats,
-  .bio {
-  }
-
-  .stats {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  span {
-    color: violet;
-  }
-</style>
+<script src="../../server/public/img.js"></script>

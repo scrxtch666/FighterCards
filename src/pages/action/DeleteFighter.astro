@@ -7,43 +7,9 @@ import Delete from "../../components/Delete.astro";
 ---
 
 <Layout title="FighterCard">
-  <div class="showCase">
-    {showCaseData.map((showCase) => <Delete showCase={showCase} />)}
-  </div>
-  <!-- 
-  <div class="showCase">
-    {showCaseData.map((showCase) => <ShowCase showCase={showCase} />)}
-  </div>
--->
+  {showCaseData.map((showCase) => <Delete showCase={showCase} />)}
 
-  <div class="container">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
     {fighterDatas.map((fighterData) => <Fighter fighterData={fighterData} />)}
   </div>
 </Layout>
-
-<style>
-  body {
-  }
-  .showCase {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 70px;
-    padding: 50px;
-    max-width: 1150px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-  }
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 70px;
-    padding: 30px;
-    max-width: 1150px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-  }
-</style>
